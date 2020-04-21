@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "/Views/Shared/_Authorized.cshtml";
+}
+@section Head {
+    @RenderSection("Head", required: false)
+}
+@section LeftColumn {
+    @RenderSection("LeftColumn", required: false)
+}
+@section ContentMenu{
+    <partial name="_SettingsMenuPartial" />
+    @RenderSection("ContentMenu", required: true)
+}
+@RenderBody()
+@section RightColumn {
+    @RenderSection("RightColumn", required: false)
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

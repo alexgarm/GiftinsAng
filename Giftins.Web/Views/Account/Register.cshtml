@@ -1,0 +1,55 @@
+﻿@model RegisterViewModel
+@{
+    Layout = "/Views/Shared/_Frontpage.cshtml";
+    ViewBag.Title = "Registration - Giftins";
+}
+<h3>@ViewData["Message"]</h3>
+<div class="row">
+    <div class="col-12 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6 sign-wrapper">
+        <div class="row sign-header">
+            <div class="col-6 item">
+                <a asp-controller="Account" asp-action="Login">Sign in</a>
+            </div>
+            <div class="col-6 item">
+                <a asp-controller="Account" asp-action="Register" class="active">Sign up</a>
+            </div>
+        </div>
+        <div class="row">
+            <span class="w-100 text-center mt-3">login with</span>
+        </div>
+        <div class="row sign-prov">
+            <partial name="_SignExternalPartial" />
+        </div>
+        <div class="row">
+            <span class="w-100 text-center">
+                <span>-</span>
+                <span>OR</span>
+                <span>-</span>
+            </span>
+        </div>
+        <div class="row sign-body">
+            <div class="col-10 offset-1">
+                <form asp-route="Register" method="post">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input class="form-control" placeholder="Enter your address" />
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" placeholder="Enter your name " />
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" placeholder="Enter your password" />
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-12 offset-sm-1 col-sm-10 offset-lg-2 col-lg-8">
+                            <button class="btn btn-success form-control">Create an account</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br />

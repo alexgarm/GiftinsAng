@@ -1,0 +1,56 @@
+﻿<nav id="top-nav" class="navbar navbar-expand-md sticky-top">
+    <div class="container">
+        <div class="col-12 col-md-2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTopContent" aria-controls="navTopContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand font-weight-bold" href="/"><img src="~/img/logo.png" /></a>
+        </div>
+        <div class="col-12 col-md-10">
+            <div class="row">
+                <div id="navTopContent" class="collapse navbar-collapse">
+                    <div class="d-none d-md-block col-md-8">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="button"><span class="fa fa-search"></span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="col-12">
+                            <ul class="navbar-nav justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" asp-route="Gifts" title="Gifts">
+                                        <span class="fa fa-gift"></span>
+                                        <span class="d-md-none">&nbsp;Gifts</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" asp-route="Notifications" title="Notifications">
+                                        <span class="fa fa-bell"></span>
+                                        <span class="d-md-none">&nbsp;Notifications</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" asp-route="Settings" title="Settings">
+                                        <span class="fa fa-cog"></span>
+                                        <span class="d-md-none">&nbsp;Settings</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" asp-route="Logout" title="Log out">
+                                        <span class="fa fa-sign-out-alt"></span>
+                                        <span class="d-md-none">&nbsp;Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

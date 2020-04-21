@@ -1,0 +1,30 @@
+﻿@using Giftins.Web.Views.User
+@{
+
+}
+<ul id="user-menu" class="nav nav-pills nav-fill nav-justified mt-3">
+    <li class="nav-item @SettingsNavPages.MainSettingsNavClass(ViewContext)">
+        <a asp-route="Settings">
+            <p><span class="fa fa-user fa-2x"></span></p>
+            <p class="label">Main</p>
+        </a>
+    </li>
+    <li class="nav-item @SettingsNavPages.SecurityNavClass(ViewContext)">
+        <a asp-action="Security">
+            <p><span class="fa fa-shield-alt fa-2x"></span></p>
+            <p>Security</p>
+        </a>
+    </li>
+    <li class="nav-item @SettingsNavPages.PersonalNavClass(ViewContext)">
+        <a asp-action="Personal">
+            <p><span class="fa fa-bed fa-2x"></span></p>
+            <p>Avocation &amp; hobbies</p>
+        </a>
+    </li>
+    <li class="nav-item @SettingsNavPages.PrivacyNavClass(ViewContext)">
+        <a asp-action="Privacy">
+            <p><span class="fa fa-lock fa-2x"></span></p>
+            <p>Privacy</p>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,91 @@
+﻿@model IndexViewModel
+@{
+    ViewBag.Title = "User profile";
+    ViewData.AddActivePage(SettingsNavPages.Main);
+}
+@section ContentMenu {
+
+}
+<div class="row">
+    <div class="col-12">
+        <partial name="_StatusMessagePartial" model="@Model.StatusMessage" />
+    </div>
+</div>
+<div class="row col-12 col-md-10 offset-md-1">
+    <form asp-controller="Settings" asp-action="SetProfileInfo" method="post">
+        <div class="form-group row">
+            <label asp-for="LastName" class="col-form-label col-12 col-md-4 text-right">Last name:</label>
+            <div class="col-12 col-md-8">
+                <input asp-for="LastName" class="form-control" autocomplete="off" />
+            </div>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="FirstName" class="col-form-label col-12 col-md-4 text-right">First name:</label>
+            <div class="col-12 col-md-8">
+                <input asp-for="FirstName" class="form-control" autocomplete="off" />
+            </div>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="MiddleName" class="col-form-label col-12 col-md-4 text-right">Middle name:</label>
+            <div class="col-12 col-md-8">
+                <input asp-for="MiddleName" class="form-control" autocomplete="off" />
+            </div>
+            <span asp-validation-for="MiddleName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Gender" class="col-form-label col-12 col-md-4 text-right">Gender:</label>
+            <div class="col-12 col-md-8">
+                <select asp-for="GenderId" class="form-control">
+                    @foreach (var gender in Gender.List)
+                    {
+                        <option value="@gender.Id">@gender.Name</option>
+                    }
+                </select>
+            </div>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="BirthDay" class="col-form-label col-12 col-md-4 text-right">BirthDate:</label>
+            <div class="col-12 col-md-2 pr-md-1">
+                <input asp-for="BirthDay" class="form-control" type="number" min="1" max="31" />
+            </div>
+            <div class="col-12 col-md-3 p-md-0">
+                <select asp-for="BirthMonth" class="form-control">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-3 pl-md-1">
+                <input asp-for="BirthYear" class="form-control" type="number" />
+            </div>
+            <span asp-validation-for="BirthDay" class="text-danger"></span>
+            <span asp-validation-for="BirthMonth" class="text-danger"></span>
+            <span asp-validation-for="BirthYear" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="BirthDisplayPolicy" class="col-form-label col-12 col-md-4 text-right">Show birthday:</label>
+            <div class="form-group col-12 col-md-8">
+                <select asp-for="BirthDisplayPolicyId" class="form-control">
+                    <partial name="_PrivacyPolicyOptionsPartial" model="@Model.BirthDisplayPolicyId" />
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-6 col-md-4 offset-md-8">
+                <button type="submit" class="btn btn-success form-control">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

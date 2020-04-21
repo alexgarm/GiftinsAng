@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "/Views/Shared/_Authorized.cshtml";
+}
+@section Head {
+    @RenderSection("Head", required: false)
+}
+@section LeftColumn {
+    @RenderSection("LeftColumn", required: false)
+}
+@section ContentMenu{
+    @RenderSection("ContentMenu", required: false)
+}
+@RenderBody()
+@section RightColumn {
+    <div class="row">
+        <div class="col-12 mt-3 justify-content-center">
+            @await Component.InvokeAsync("MarketProfile")
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        @RenderSection("RightColumn", required: false)
+    </div>
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

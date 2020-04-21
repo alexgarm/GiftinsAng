@@ -1,0 +1,7 @@
+﻿@model int
+@{
+    foreach (var p in PrivacyPolicy.List)
+    {
+        @Html.Raw($"<option value=\"{p.Id}\" {(p.Id == Model ? "selected" : "")}>{p.Name}</option>");
+    }
+}

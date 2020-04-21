@@ -1,0 +1,41 @@
+﻿@model SecurityViewModel
+@{
+    ViewBag.Title = "Security settings";
+    ViewData.AddActivePage(SettingsNavPages.Security);
+}
+@section ContentMenu {
+
+}
+<div class="row pl-3 pr-3">
+    <div class="col-12">
+        <h4>Password</h4>
+        <hr />
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label asp-for="OldPassword">Please enter your old password</label>
+                    <input asp-for="OldPassword" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NewPassword">Please enter your old password</label>
+                    <input asp-for="NewPassword" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NewPasswordConfirmation">Please enter your old password</label>
+                    <input asp-for="NewPasswordConfirmation" />
+                </div>
+            </div>
+        </div>
+        <h4>Phone</h4>
+        <hr />
+        <div class="row">
+
+        </div>
+        <h4>Black list</h4>
+        <hr />
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+<hr />

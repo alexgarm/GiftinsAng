@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <AssemblyName>Giftins</AssemblyName>
+    <Copyright>CaCTuCaTu4ECKuu</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageId>Giftins</PackageId>
+    
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Giftins.Core\Giftins.Core.csproj" />
+    <ProjectReference Include="..\Giftins.Framework\Giftins.Framework.csproj" />
+  </ItemGroup>
+
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <Exec Command="npm install" />
+    <Exec Command="gulp resources-build" />
+  </Target>
+  
+  <ItemGroup>
+    <Folder Include="Areas\Installation\Models\Home\" />
+    <Folder Include="Models\Home\" />
+    <Folder Include="Models\Shared\" />
+  </ItemGroup>
+</Project>

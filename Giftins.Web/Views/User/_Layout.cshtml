@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "/Views/Shared/_Authorized.cshtml";
+}
+@section Head {
+    @RenderSection("Head", required: false)
+}
+@section LeftColumn {
+    <div class="row">
+        <div class="col-12 mt-3 justify-content-center">
+            @await Component.InvokeAsync("UserProfile")
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        @RenderSection("LeftColumn", required: false)
+    </div>
+}
+@section ContentMenu{
+    @RenderSection("ContentMenu", required: true)
+}
+@RenderBody()
+@section RightColumn {
+    @RenderSection("RightColumn", required: false)
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

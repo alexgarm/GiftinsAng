@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain\Localization\**" />
+    <Compile Remove="Domain\Stores\**" />
+    <Compile Remove="Domain\User\Mappers\**" />
+    <Compile Remove="Events\**" />
+    <EmbeddedResource Remove="Domain\Localization\**" />
+    <EmbeddedResource Remove="Domain\User\Mappers\**" />
+    <EmbeddedResource Remove="Events\**" />
+    <None Remove="Domain\Localization\**" />
+    <None Remove="Domain\Stores\**" />
+    <None Remove="Domain\User\Mappers\**" />
+    <None Remove="Events\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\Wish\" />
+    <Folder Include="Domain\Event\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>

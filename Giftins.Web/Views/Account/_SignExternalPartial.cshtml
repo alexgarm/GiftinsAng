@@ -1,0 +1,16 @@
+﻿@inject SignInManager<GiftinsUser> SignInManager
+<div class="col-4">
+    <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+        <button type="submit" name="provider" value="FB" class="btn facebook form-control" title="Authorize using Facebook"><span class="fab fa-facebook-f"></span> Facebook</button>
+    </form>
+</div>
+<div class="col-4">
+    <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+        <button type="submit" name="provider" value="Google" class="btn googleplus form-control" title="Authorize using Google+"><span class="fab fa-google-plus-g"></span> Google</button>
+    </form>
+</div>
+<div class="col-4">
+    <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+        <button type="submit" name="provider" value="Instagram" class="btn inst form-control" title="Authorize using Instagram"><span class="fab fa-instagram"></span> Instagram</button>
+    </form>
+</div>

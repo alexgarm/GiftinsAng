@@ -1,0 +1,45 @@
+﻿<div class="col-12 col-md-8">
+    <div class="col-12">
+        <nav class="navbar-nav top-nav justify-content-end">
+            <span class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="About">About us</a>
+            </span>
+            <span class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Help">Help</a>
+            </span>
+            <span class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+            </span>
+            <div class="nav-item dropdown d-none d-md-block">
+                <a class="nav-link dropdown-toggle" href="#" id="mmLangDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
+                <div class="dropdown-menu" aria-labelledby="mmLangDropdown">
+                    <a class="dropdown-item">En</a>
+                    <a class="dropdown-item">Ru</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="col-12 col-md-4">
+    <div class="col-12">
+        <nav class="navbar-nav justify-content-end">
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <span class="nav-item">
+                        <a class="nav-link font-weight-bold" asp-route="Logout">Logout</a>
+                    </span>
+                }
+                else
+                {
+                    <span class="nav-item">
+                        <a class="nav-link font-weight-bold" asp-route="Register">Sign up</a>
+                    </span>
+                    <span class="nav-item">
+                        <a class="nav-link font-weight-bold" asp-route="Login">Login</a>
+                    </span>
+                }
+            }
+        </nav>
+    </div>
+</div>

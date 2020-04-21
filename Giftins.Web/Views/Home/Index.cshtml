@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "/Views/Shared/_Frontpage.cshtml";
+    ViewBag.ShowOffer = true;
+}
+<div class="row">
+    <div class="offset-2 col-8 align-items-center text-center mt-4">
+        <h2>Still don`t know what to present?</h2>
+        <h1>We can help you!</h1>
+        <br />
+        <div class="col-8 offset-2">
+            <div class="input-group custom-search-form">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                        <span class="fa fa-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+@{ await Html.RenderPartialAsync("_SocialFooterPartial"); }
