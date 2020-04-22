@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giftins.Web", "Giftins\Giftins.Web.csproj", "{72368081-525E-4FAA-B236-7BF2C4B8119E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B32AC671-E5AD-40AE-9BCA-618671567F77} = {B32AC671-E5AD-40AE-9BCA-618671567F77}
+		{62D2367E-2119-4764-92CE-194277DEF7F1} = {62D2367E-2119-4764-92CE-194277DEF7F1}
+		{80F73C8E-7D46-45A7-B901-553719C9F130} = {80F73C8E-7D46-45A7-B901-553719C9F130}
+		{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F} = {351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giftins.Data", "..\..\..\Documents\vscode\Giftins-dev\Giftins.Data\Giftins.Data.csproj", "{B32AC671-E5AD-40AE-9BCA-618671567F77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giftins.Core", "..\..\..\Documents\vscode\Giftins-dev\Giftins.Core\Giftins.Core.csproj", "{80F73C8E-7D46-45A7-B901-553719C9F130}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giftins.Application", "..\..\..\Documents\vscode\Giftins-dev\Giftins.Application\Giftins.Application.csproj", "{62D2367E-2119-4764-92CE-194277DEF7F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giftins.Services", "..\..\..\Documents\vscode\Giftins-dev\Giftins.Services\Giftins.Services.csproj", "{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72368081-525E-4FAA-B236-7BF2C4B8119E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72368081-525E-4FAA-B236-7BF2C4B8119E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72368081-525E-4FAA-B236-7BF2C4B8119E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72368081-525E-4FAA-B236-7BF2C4B8119E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32AC671-E5AD-40AE-9BCA-618671567F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32AC671-E5AD-40AE-9BCA-618671567F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32AC671-E5AD-40AE-9BCA-618671567F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32AC671-E5AD-40AE-9BCA-618671567F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F73C8E-7D46-45A7-B901-553719C9F130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F73C8E-7D46-45A7-B901-553719C9F130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F73C8E-7D46-45A7-B901-553719C9F130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F73C8E-7D46-45A7-B901-553719C9F130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D2367E-2119-4764-92CE-194277DEF7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D2367E-2119-4764-92CE-194277DEF7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D2367E-2119-4764-92CE-194277DEF7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D2367E-2119-4764-92CE-194277DEF7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351D86C2-9D12-4F3A-B0C6-F7ED987C9F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {655AFCF4-E336-4679-9D4A-8149F41FBAC3}
+	EndGlobalSection
+EndGlobal
