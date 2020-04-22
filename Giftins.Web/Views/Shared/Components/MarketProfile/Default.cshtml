@@ -1,9 +1,0 @@
-﻿@model MarketProfileViewModel
-@{
-    <img src="@Model.PictureUrl" class="img-thumbnail" />
-    <p class="mb-0"><span>@Model.Name</span></p>
-    @if (!string.IsNullOrEmpty(Model.Slogan))
-    {
-        <p class="text-muted">@Model.Slogan</p>
-    }
-}
