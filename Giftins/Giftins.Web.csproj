@@ -30,7 +30,6 @@
     <Folder Include="ComponentModel\" />
     <Folder Include="Extensions\" />
     <Folder Include="Areas\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
