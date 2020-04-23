@@ -28,13 +28,13 @@
 
   <ItemGroup>
     <Folder Include="ComponentModel\" />
-    <Folder Include="Areas\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Application\Giftins.Application.csproj" />
     <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Core\Giftins.Core.csproj" />
     <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Data\Giftins.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Services\Giftins.Services.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
