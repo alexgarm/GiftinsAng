@@ -28,11 +28,11 @@
 
   <ItemGroup>
     <Folder Include="ComponentModel\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Areas\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Application\Giftins.Application.csproj" />
     <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Core\Giftins.Core.csproj" />
     <ProjectReference Include="..\..\..\..\Documents\vscode\Giftins-dev\Giftins.Data\Giftins.Data.csproj" />
   </ItemGroup>
