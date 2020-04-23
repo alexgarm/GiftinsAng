@@ -38,6 +38,16 @@ namespace Giftins
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder => {
+
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().Build();
+
+                });
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

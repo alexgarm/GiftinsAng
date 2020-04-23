@@ -28,7 +28,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
+
 })
 export class AppModule { }
