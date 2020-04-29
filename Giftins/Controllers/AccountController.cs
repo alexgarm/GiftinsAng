@@ -18,6 +18,9 @@ namespace Giftins.Web.Controllers
     using Services;
     using Models.Account;
 
+
+    [Route("api/[controller]")]
+    [ApiController]
     [Authorize]
     public partial class AccountController : BaseController
     {
@@ -68,7 +71,7 @@ namespace Giftins.Web.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
@@ -98,7 +101,7 @@ namespace Giftins.Web.Controllers
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    return Ok();
                 }
             }
 
