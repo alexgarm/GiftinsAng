@@ -19,7 +19,7 @@ namespace Giftins.Web.Controllers
     using Models.Account;
 
 
-    [Route("api/[controller]")]
+    
     [ApiController]
     [Authorize]
     public partial class AccountController : BaseController
@@ -71,7 +71,7 @@ namespace Giftins.Web.Controllers
             return View();
         }
 
-        [HttpPost("[action]")]
+   
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
